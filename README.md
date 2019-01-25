@@ -26,7 +26,7 @@ import {
   ElmactMessage as Msg,
   ElmactMessageType as Type,
   ElmactMessageValue as Val
-} from "./elmact";
+} from "elmact";
 
 const increase = Symbol("increase");
 const decrease = Symbol("decrease");
