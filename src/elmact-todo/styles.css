@@ -1,0 +1,27 @@
+* {
+  box-sizing: border-box;
+}
+
+.app {
+  font-family: sans-serif;
+  width: 400px;
+  margin: 30px auto;
+  display: block;
+}
+
+.strikethrough {
+  text-decoration: line-through;
+}
+
+.item {
+  display: block;
+  cursor: pointer;
+}
+
+.item.strikethrough {
+  cursor: auto;
+}
+
+.creator input {
+  width: 100%;
+}
