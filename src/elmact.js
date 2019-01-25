@@ -29,6 +29,14 @@ function dispatch(cmd) {
 }
 
 export function ElmactComponent(component) {
+  const isFunctional =
+    typeof component === "function" &&
+    Function.prototype.toString.call(component).indexOf("class") !== 0;
+
+  if (!isFunctional) {
+    throw new Error("ElmactComponents must be functions, not classes.");
+  }
+
   return props => {
     return component(props, dispatch);
   };

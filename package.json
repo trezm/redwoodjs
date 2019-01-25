@@ -1,20 +1,27 @@
 {
   "name": "elmact",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "",
   "keywords": [],
   "main": "src/elmact.js",
   "dependencies": {
-    "react": "16.5.2",
-    "react-dom": "16.5.2",
-    "react-scripts": "2.0.3"
+    "preact": "8.4.2",
+    "preact-compat": "3.18.4"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "@babel/core": "7.2.2",
+    "@babel/preset-react": "7.0.0",
+    "parcel-bundler": "^1.11.0",
+    "parcel-plugin-bundle-visualiser": "^1.2.0"
+  },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "start": "parcel src/index.html"
   },
-  "browserslist": [">0.2%", "not dead", "not ie <= 11", "not op_mini all"]
+  "alias": {
+    "react": "preact-compat",
+    "react-dom": "preact-compat"
+  },
+  "browserslist": [
+    "since 2017-06"
+  ]
 }
