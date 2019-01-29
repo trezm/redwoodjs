@@ -1,5 +1,4 @@
 import React from "react";
-import ReactDOM from "react-dom";
 
 import "./styles.css";
 
@@ -30,16 +29,17 @@ export const Item = ElmactComponent((props, dispatch) => {
   if (model.state === "done") {
     return (
       <label className="item strikethrough">
-        <input type="checkbox" checked />
+        <input type="checkbox" value={true} checked/>
         <span>{model.text}</span>
       </label>
     );
   } else {
     return (
-      <label for={model.text} className="item">
+      <label htmlFor={model.text} className="item">
         <input
           id={model.text}
           type="checkbox"
+          value={false}
           onClick={() => dispatch(Msg(checkOff, model.key))}
         />
         <span>{model.text}</span>

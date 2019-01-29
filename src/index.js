@@ -1,7 +1,7 @@
 /**
  * The simplest counter
  */
-import "./elmact-simple-counter";
+// import "./elmact-simple-counter";
 
 /**
  * The classic counter, but with some frills (async, multi-component)
@@ -9,6 +9,6 @@ import "./elmact-simple-counter";
 // import "./elmact-counter";
 
 /**
- * This is the second example -- a todo list
+ * A todo list
  */
-// import "./elmact-todo";
+import * as all from "./elmact-todo";

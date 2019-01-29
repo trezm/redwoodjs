@@ -53,7 +53,7 @@ function update(state = { counter: 0 }, cmd = Msg(none)) {
 const Outter = props => {
   const { model } = props;
   const todos = Object.getOwnPropertyNames(model.todos).map(key => (
-    <Item model={model.todos[key]} />
+    <Item key={key} model={model.todos[key]} />
   ));
 
   return (
