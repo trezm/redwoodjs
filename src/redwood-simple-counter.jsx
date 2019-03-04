@@ -4,12 +4,12 @@ import "./styles.css";
 
 import {
   none,
-  ElmactBootstrap,
-  ElmactComponent,
-  ElmactMessage as Msg,
-  ElmactMessageType as Type,
-  ElmactMessageValue as Val
-} from "./elmact";
+  RedwoodBootstrap,
+  RedwoodComponent,
+  RedwoodMessage as Msg,
+  RedwoodMessageType as Type,
+  RedwoodMessageValue as Val
+} from "./redwood";
 
 const increase = Symbol("increase");
 const decrease = Symbol("decrease");
@@ -29,7 +29,7 @@ function update(state = { counter: 0 }, cmd = Msg(none)) {
   }
 }
 
-const Counter = ElmactComponent((props, dispatch) => {
+const Counter = RedwoodComponent((props, dispatch) => {
   const { model } = props;
 
   return (
@@ -42,7 +42,7 @@ const Counter = ElmactComponent((props, dispatch) => {
 });
 
 const initialState = { counter: 0 };
-ElmactBootstrap(
+RedwoodBootstrap(
   document.getElementById("root"),
   Counter,
   initialState,

@@ -4,11 +4,11 @@ import "./styles.css";
 
 import {
   none,
-  ElmactBootstrap,
-  ElmactComponent,
-  ElmactMessage as Msg,
-  ElmactMessageType as Type
-} from "../elmact";
+  RedwoodBootstrap,
+  RedwoodComponent,
+  RedwoodMessage as Msg,
+  RedwoodMessageType as Type
+} from "../redwood";
 
 import { update as itemUpdate, checkOff, Item } from "./item";
 import {
@@ -85,7 +85,7 @@ const initialState = {
   input: ""
 };
 
-ElmactBootstrap(
+RedwoodBootstrap(
   document.getElementById("root"),
   Outter,
   initialState,
