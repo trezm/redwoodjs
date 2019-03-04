@@ -4,10 +4,10 @@ import "./styles.css";
 
 import {
   none,
-  ElmactComponent,
-  ElmactMessage as Msg,
-  ElmactMessageType as Type
-} from "../elmact";
+  RedwoodComponent,
+  RedwoodMessage as Msg,
+  RedwoodMessageType as Type
+} from "../redwood";
 
 export const create = Symbol("create-item");
 export const updateInput = Symbol("update-input");
@@ -29,7 +29,7 @@ function onSubmit(e, dispatch) {
   dispatch(Msg(create, e.target.todoInput.value));
 }
 
-export const Creator = ElmactComponent((props, dispatch) => {
+export const Creator = RedwoodComponent((props, dispatch) => {
   const { model } = props;
 
   return (

@@ -4,10 +4,10 @@ import "./styles.css";
 
 import {
   none,
-  ElmactComponent,
-  ElmactMessage as Msg,
-  ElmactMessageType as Type
-} from "../elmact";
+  RedwoodComponent,
+  RedwoodMessage as Msg,
+  RedwoodMessageType as Type
+} from "../redwood";
 
 export const checkOff = Symbol("check-item");
 
@@ -23,13 +23,13 @@ export function update(state, cmd = Msg(none)) {
   }
 }
 
-export const Item = ElmactComponent((props, dispatch) => {
+export const Item = RedwoodComponent((props, dispatch) => {
   const { model } = props;
 
   if (model.state === "done") {
     return (
       <label className="item strikethrough">
-        <input type="checkbox" value={true} checked/>
+        <input type="checkbox" value={true} checked />
         <span>{model.text}</span>
       </label>
     );

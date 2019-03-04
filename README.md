@@ -1,18 +1,18 @@
-# Elmact
+# Redwood
 
-Elmact is a small library with examples to enforce coding in the Elm style, but using JS and React as the rendering library. It's a work in progress and should be treated as such.
+Redwood is a small library with examples to enforce coding in the Elm style in React. It's a work in progress and should be treated as such.
 
 ## Useage
 
 ```
-yarn add --exact elmact
+yarn add --exact redwood
 ```
 or
 ```
-npm install --exact elmact
+npm install --exact redwood
 ```
 
-Here's a basic counter example -- checkout out some of the other examples too! `elmact-counter.js` and the app in `elmact-todo`. You can access these by changing what's commented in `index.js`.
+Here's a basic counter example -- checkout out some of the other examples too! `redwood-counter.js` and the app in `redwood-todo`. You can access these by changing what's commented in `index.js`.
 
 ```js
 import React from "react";
@@ -21,12 +21,12 @@ import "./styles.css";
 
 import {
   none,
-  ElmactBootstrap,
-  ElmactComponent,
-  ElmactMessage as Msg,
-  ElmactMessageType as Type,
-  ElmactMessageValue as Val
-} from "elmact";
+  RedwoodBootstrap,
+  RedwoodComponent,
+  RedwoodMessage as Msg,
+  RedwoodMessageType as Type,
+  RedwoodMessageValue as Val
+} from "redwoodjs";
 
 const increase = Symbol("increase");
 const decrease = Symbol("decrease");
@@ -46,7 +46,7 @@ function update(state = { counter: 0 }, cmd = Msg(none)) {
   }
 }
 
-const Counter = ElmactComponent((props, dispatch) => {
+const Counter = RedwoodComponent((props, dispatch) => {
   const { model } = props;
 
   return (
@@ -59,7 +59,7 @@ const Counter = ElmactComponent((props, dispatch) => {
 });
 
 const initialState = { counter: 0 };
-ElmactBootstrap(
+RedwoodBootstrap(
   document.getElementById("root"),
   Counter,
   initialState,

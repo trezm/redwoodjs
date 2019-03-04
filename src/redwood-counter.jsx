@@ -4,11 +4,11 @@ import "./styles.css";
 
 import {
   none,
-  ElmactBootstrap,
-  ElmactComponent,
-  ElmactMessage as Msg,
-  ElmactMessageType as Type
-} from "./elmact";
+  RedwoodBootstrap,
+  RedwoodComponent,
+  RedwoodMessage as Msg,
+  RedwoodMessageType as Type
+} from "./redwood";
 
 const increase = Symbol("increase");
 const decrease = Symbol("decrease");
@@ -19,12 +19,12 @@ function update(state = { counter: 0 }, cmd = Msg(none)) {
     case increase:
       return {
         state: { counter: state.counter + cmd.value },
-        cmd: none
+        cmd: Msg(none)
       };
     case decrease:
       return {
         state: { counter: state.counter - cmd.value },
-        cmd: none
+        cmd: Msg(none)
       };
     case doubleIncrement:
       return {
@@ -42,13 +42,13 @@ function delayedIncrease() {
   });
 }
 
-const Counter = ElmactComponent((props, dispatch) => {
+const Counter = RedwoodComponent((props, dispatch) => {
   const { model } = props;
 
   return <div>{model}</div>;
 });
 
-const Buttons = ElmactComponent((props, dispatch) => {
+const Buttons = RedwoodComponent((props, dispatch) => {
   return (
     <div>
       <button onClick={() => dispatch(Msg(increase, 1))}>increase</button>
@@ -74,7 +74,7 @@ const Outter = props => {
   );
 };
 
-const { mount } = ElmactBootstrap(
+const { mount } = RedwoodBootstrap(
   document.getElementById("root"),
   Outter,
   { counter: 0 },
