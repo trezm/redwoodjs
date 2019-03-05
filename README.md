@@ -5,11 +5,11 @@ Redwood is a small library with examples to enforce coding in the Elm style in R
 ## Useage
 
 ```
-yarn add --exact redwood
+yarn add --exact redwoodjs
 ```
 or
 ```
-npm install --exact redwood
+npm install --exact redwoodjs
 ```
 
 Here's a basic counter example -- checkout out some of the other examples too! `redwood-counter.js` and the app in `redwood-todo`. You can access these by changing what's commented in `index.js`.
